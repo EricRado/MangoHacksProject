@@ -32,8 +32,8 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     user_id = models.AutoField(primary_key=True)
     nickname = models.CharField(unique=True, max_length=255)
-    first_name = models.CharField(max_length=50, default=None)
-    last_name = models.CharField(max_length=50, default=None)
+    first_name = models.CharField(max_length=50, default=None , null=True)
+    last_name = models.CharField(max_length=50, default=None, null=True)
     password = models.CharField(max_length=255)
     email_address = models.EmailField(unique=True, max_length=255)
     last_login = models.DateTimeField(default=timezone.now)
