@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
-import os
+import os,json
+from django.core.urlresolvers import reverse_lazy
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -79,6 +81,12 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# Database
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
+with open('bookstore/aws_rds_auth.json') as data_file:
+    DATABASES = json.load(data_file)
 
 
 # Password validation
