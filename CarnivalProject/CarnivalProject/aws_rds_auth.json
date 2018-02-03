@@ -9,7 +9,7 @@
        "HOST" : "carnivalprojectdb.crpd03akgc1a.us-east-2.rds.amazonaws.com",
        "PORT" : "3306",
        "OPTIONS" : {
-           "sql_mode" : "traditional"
+          "sql_mode" : "traditional"
        }
    }
 }
