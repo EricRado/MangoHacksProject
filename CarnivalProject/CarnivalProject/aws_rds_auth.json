@@ -1,13 +1,10 @@
 {
    "default": {
        "ENGINE" : "django.db.backends.mysql",
-<<<<<<< HEAD
        "NAME" : "carnivalprojectdb",
        "USER" : "eric",
-=======
        "NAME" : "CarnivalProjectDB",
        "USER" : "Eric",
->>>>>>> master
        "PASSWORD" :"mango2018",
        "HOST" : "carnivalprojectdb.crpd03akgc1a.us-east-2.rds.amazonaws.com",
        "PORT" : "3306",

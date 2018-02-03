@@ -79,24 +79,16 @@ WSGI_APPLICATION = 'CarnivalProject.wsgi.application'
 #DATABASES = {
  #   'default': {
   #      'ENGINE': 'django.db.backends.sqlite3',
-<<<<<<< HEAD
    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
-=======
  ## }
->>>>>>> master
 #}
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 with open('CarnivalProject/aws_rds_auth.json') as data_file:
-<<<<<<< HEAD
    DATABASES = json.load(data_file)
-=======
-    DATABASES = json.load(data_file)
->>>>>>> master
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
