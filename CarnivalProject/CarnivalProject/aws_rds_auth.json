@@ -1,12 +1,12 @@
 {
    "default": {
        "ENGINE" : "django.db.backends.mysql",
-       "NAME" : "carnivalprojectdb",
-       "USER" : "eric",
-       "PASSWORD" :"Nirvana94",
+       "NAME" : "CarnivalProjectDB",
+       "USER" : "Eric",
+       "PASSWORD" :"mango2018",
        "HOST" : "carnivalprojectdb.crpd03akgc1a.us-east-2.rds.amazonaws.com",
        "OPTIONS" : {
-           "init_command" : "SET default_storage_engine=INNODB;SET sql_mode='STRICT_TRANS_TABLES';"
+           "sql_mode" : "traditional"
        }
    }
 }
