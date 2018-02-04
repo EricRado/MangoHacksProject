@@ -24,4 +24,4 @@ def getAllUsers(request):
 
 def userSelected(selectedUser):
 
-    #chat_exists = Chat.objects.filter(nickname1=)
+  chat_exists = Chat.objects.filter(nickname1=)

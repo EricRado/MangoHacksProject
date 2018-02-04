@@ -41,11 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-<<<<<<< HEAD
     'bootstrap3',
-=======
     'messageService'
->>>>>>> origin/the_motherfocker
 ]
 
 MIDDLEWARE = [
@@ -63,11 +60,8 @@ ROOT_URLCONF = 'CarnivalProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
         'DIRS': ['templates',],
-=======
         'DIRS': ['templates'],
->>>>>>> origin/the_motherfocker
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
