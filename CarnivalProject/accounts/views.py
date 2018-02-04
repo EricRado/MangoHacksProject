@@ -95,3 +95,9 @@ class LogoutView(RedirectView):
         return super().get(request, *args, **kwargs)
 
 
+<<<<<<< HEAD
+=======
+# Create your views here.
+
+
+>>>>>>> origin/the_motherfocker
