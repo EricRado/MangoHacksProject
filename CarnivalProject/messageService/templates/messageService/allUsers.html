@@ -1,10 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+{% load static from staticfiles %}
+{% load bootstrap3 %}
 
-</body>
-</html>
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% block content %}
+    
+<div class="container">
+    <p style="padding:25px"> </p>
+    {% for user in all_users %}
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col-sm-push-1">
+                <a href="#" id="pop">
+                    <img id="imageResource" src="{% static  'img/noUserImg.jpeg'  %}" class="img-responsive" height="300" width="300" style="cursor:zoom-in;">
+                </a>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-sm-push-2" style="border-right:1px solid white; height:200px;">
+                <h2>{{ user.nickname }}</h2>
+                <h4>{{ user.first_name }} {{ user.last_name }}</h4>
+
+                <a href="{ url 'messageService:userSelected' user.nickname }"><button type="button" class="btn btn-primary btn-md">Start Chatting</button></a>
+
+            </div>
+        
+            <div class="col-xs-3 col-sm-3 col-sm-push-2" style="border-right:1px solid white; height:100px;">
+                <h2>About Me</h2>
+                <h4>{{ user.about_me }}</h4>
+        
+            </div>
+        </div>
+        
+        <hr>
+
+    {% endfor %}
+
+
+    <div class="modal fade " id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+              <img src="" id="imagepreview" style="width: 560px; height: 300px; ">
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <p style="padding:25px"></p>
+</div>
+
+{% endblock %}

@@ -22,5 +22,6 @@ urlpatterns = [
     #url(r'^accounts/', include('accounts.urls', namespace='accounts')),
     #url(r"^accounts/", include("django.contrib.auth.urls")),
     url(r'^accounts/', include('accounts.urls', namespace='accounts')),
+    url(r'^messageService/', include('messageService.urls', namespace='messageService')),
     url(r'^admin/', admin.site.urls),
 ]
