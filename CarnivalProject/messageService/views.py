@@ -22,6 +22,7 @@ def getAllUsers(request):
     return render(request, 'messageService/allUsers.html', {'all_users': allUsers})
 
 
+<<<<<<< HEAD
 def userSelected(request,selectedUserNickname):
     user_id = request.session['userId']
     user = models.User.objects.filter(id=user_id)
@@ -31,3 +32,8 @@ def userSelected(request,selectedUserNickname):
         createChat(user.nickname, selectedUserNickname)
     else:
         print("Chat already exists...")
+=======
+def userSelected(selectedUser):
+
+  chat_exists = Chat.objects.filter(nickname1=)
+>>>>>>> tafiki-friki2

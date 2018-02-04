@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'bootstrap3',
     'messageService'
 ]
 
@@ -59,6 +60,7 @@ ROOT_URLCONF = 'CarnivalProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates',],
         'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -71,6 +73,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'CarnivalProject.wsgi.application'
 
