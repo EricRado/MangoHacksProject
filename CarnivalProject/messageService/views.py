@@ -22,6 +22,12 @@ def getAllUsers(request):
     return render(request, 'messageService/allUsers.html', {'all_users': allUsers})
 
 
-def userSelected(selectedUser):
-
-    #chat_exists = Chat.objects.filter(nickname1=)
+def userSelected(request,selectedUserNickname):
+    user_id = request.session['userId']
+    user = models.User.objects.filter(id=user_id)
+    chat_exists = Chat.objects.filter(Q(nickname1=selectedUserNickname, nickname2=user.nickname)
+                                      | Q(nickname1=user.nickname, nickname2=selectedUserNickname))
+    if not chat_exists:
+        createChat(user.nickname, selectedUserNickname)
+    else:
+        print("Chat already exists...")
