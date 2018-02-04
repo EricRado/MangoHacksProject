@@ -39,6 +39,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_login = models.DateTimeField(default=timezone.now)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+    about_me = models.CharField(max_length =500)
 
     objects = UserManager()
 
